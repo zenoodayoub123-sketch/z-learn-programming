@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z Learn Programming - Alpha Version</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* تصميم عصري وبسيط مع ألوان مريحة للتعلّم */
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+            direction: rtl;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* شريط التنقل */
+        nav {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+        nav h1 {
+            margin: 0;
+            color: #007bff;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            margin-left: 2rem;
+            margin-right: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #007bff;
+        }
+        /* قسم البطل (Hero) */
+        .hero {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            animation: fadeIn 1s ease-in;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .cta-button {
+            background-color: #00b894;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .cta-button:hover {
+            background-color: #00a085;
+            transform: translateY(-2px);
+        }
+        /* قسم الرسالة */
+        .message {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: white;
+            animation: slideUp 1s ease-in 0.5s both;
+        }
+        .message h2 {
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+        .message p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        /* قسم اللغات */
+        .languages {
+            padding: 60px 20px;
+            background-color: #f4f7fa;
+            text-align: center;
+            animation: slideUp 1s ease-in 1s both;
+        }
+        .languages h2 {
+            color: #007bff;
+            margin-bottom: 2rem;
+        }
+        .language-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .language-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 200px;
+            transition: transform 0.3s;
+        }
+        .language-item:hover {
+            transform: translateY(-5px);
+        }
+        .language-item h3 {
+            color: #007bff;
+            margin-bottom: 0.5rem;
+        }
+        /* قسم التواصل */
+        .contact {
+            padding: 60px 20px;
+            background-color: white;
+            text-align: center;
+            animation: slideUp 1s ease-in 1.5s both;
+        }
+        .contact h2 {
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+        .contact p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .contact a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        /* الحركات الانتقالية */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        /* التصميم المتجاوب */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            nav .container {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 1rem;
+            }
+            .language-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>Z Learn Programming</h1>
+            <ul>
+                <li><a href="#home">الصفحة الرئيسية</a></li>
+                <li><a href="#" onclick="alert('هذه الصفحة ستتوفر في النسخة الرسمية من الموقع')">الدورات</a></li>
+                <li><a href="#" onclick="alert('هذه الصفحة ستتوفر في النسخة الرسمية من الموقع')">عن الموقع</a></li>
+                <li><a href="#" onclick="alert('هذه الصفحة ستتوفر في النسخة الرسمية من الموقع')">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>أهلًا بك في النسخة الأولية (Alpha) من موقع Z Learn Programming</h1>
+            <p>هذه نسخة تجريبية أولى مخصصة لعرض الفكرة، وستتوسع الميزات لاحقًا بناءً على ملاحظاتكم!</p>
+            <button class="cta-button" onclick="alert('شكرًا لاهتمامك! المنصة الكاملة قادمة قريبًا. يرجى مشاركة ملاحظاتك عبر البريد: zenoodayoub123@gmail.com')">ابدأ التعلّم الآن</button>
+        </div>
+    </section>
+
+    <section class="message">
+        <div class="container">
+            <h2>رسالة من المبرمج زين</h2>
+            <p>مرحبًا! أنا زين، مؤسس موقع Z Learn Programming. رؤيتي تتمحور حول مساعدة الطلاب على تعلم البرمجة من الصفر، بناء عقلية حل المشكلات، والانتقال من مرحلة الاستهلاك إلى مرحلة الإنتاج البرمجي الحقيقي. نسخة الألفا هذه فرصة لكم لتشكيل مستقبل المنصة—شاركوا أفكاركم ودعونا نبني شيئًا رائعًا معًا!</p>
+        </div>
+    </section>
+
+    <section class="languages">
+        <div class="container">
+            <h2>اللغات البرمجية التي سيشملها الموقع مستقبلًا</h2>
+            <div class="language-grid">
+                <div class="language-item">
+                    <h3>HTML</h3>
+                    <p>بناء هيكل صفحات الويب بسهولة.</p>
+                </div>
+                <div class="language-item">
+                    <h3>CSS</h3>
+                    <p>تصميم وتجميل مواقع ويب جميلة ومتجاوبة.</p>
+                </div>
+                <div class="language-item">
+                    <h3>JavaScript</h3>
+                    <p>إضافة تفاعل وميزات ديناميكية لمشاريعك.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>تواصل معنا</h2>
+            <p>لأي استفسارات أو ملاحظات، يرجى التواصل معنا عبر البريد الإلكتروني:</p>
+            <a href="mailto:zenoodayoub123@gmail.com">zenoodayoub123@gmail.com</a>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript بسيط للتمرير السلس (إذا لزم الأمر)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
