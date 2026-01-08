@@ -140,15 +140,18 @@
         }
         .feature-list {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 1rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
         }
         .feature-item {
             background: rgba(255, 255, 255, 0.1);
             padding: 1.5rem;
             border-radius: 15px;
-            width: 250px;
+            width: 200px;
+            flex-shrink: 0;
             transition: transform 0.3s ease;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             cursor: pointer;
@@ -179,15 +182,18 @@
         }
         .course-list {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 1rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
         }
         .course-item {
             background: rgba(255, 255, 255, 0.1);
             padding: 1.5rem;
             border-radius: 15px;
-            width: 250px;
+            width: 200px;
+            flex-shrink: 0;
             transition: transform 0.3s ease;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             cursor: pointer;
@@ -273,17 +279,6 @@
             .cta-button {
                 padding: 1rem 2rem;
                 font-size: 1.1rem;
-            }
-            .feature-list, .course-list {
-                flex-direction: row;
-                justify-content: flex-start;
-                gap: 1rem;
-                overflow-x: auto;
-                padding-bottom: 1rem;
-            }
-            .feature-item, .course-item {
-                width: 200px;
-                flex-shrink: 0;
             }
         }
     </style>
